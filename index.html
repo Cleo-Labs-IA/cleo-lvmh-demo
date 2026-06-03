@@ -671,7 +671,7 @@ function askAnswer(q){
    follows:['Mes risques critiques','Prochaines deadlines','Quoi de neuf cette semaine ?']};
 }
 (function(){
- var launcher=document.createElement('button');launcher.className='ask-fab';launcher.setAttribute('aria-label','Cleo AI');launcher.innerHTML='<span class="ask-fab-ic">C</span> Cleo AI';launcher.addEventListener('click',askToggle);document.body.appendChild(launcher);
+ var launcher=document.createElement('button');launcher.className='ask-fab';launcher.setAttribute('aria-label','Cleo AI');launcher.innerHTML='<span class="ask-fab-ic">C</span> Cleo AI';launcher.addEventListener('click',function(){window.open('https://cleo-insight-lvmh.vercel.app/','_blank','noopener');});document.body.appendChild(launcher);
  var panel=document.createElement('div');panel.className='ask-panel';panel.id='askpanel';
  panel.innerHTML='<div class="ask-head"><div class="ask-hav">C</div><div><div class="ask-htitle">Cleo AI</div><div class="ask-hsub">Utilise toutes vos données</div></div><span class="ask-beta">BETA</span><button class="ask-close" onclick="askToggle()" aria-label="Fermer">✕</button></div><div class="ask-body" id="askbody"></div><div class="ask-comp"><textarea id="askinput" placeholder="Comment puis-je vous aider ?" rows="1"></textarea><button class="ask-send" onclick="askSend()" aria-label="Envoyer">↑</button></div><div class="ask-hint">↵ envoyer · Shift+↵ retour à la ligne</div>';
  document.body.appendChild(panel);
